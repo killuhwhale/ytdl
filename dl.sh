@@ -2,7 +2,7 @@
 
 # bash dl.sh video_url folder_name
 
-echo "Downloading {$1}"
+echo "Downloading {$1} to {$2}"
 
 if [ -z "$2" ]; then
   # No second argument provided
