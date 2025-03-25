@@ -1,5 +1,12 @@
 <!-- https://github.com/killuhwhale/ytdl -->
 
+
+# Single run
+yt-dlp --verbose --extract-audio --audio-format 'mp3' -o '~/Music/yt_dl/%(title)s.%(ext)s' URL_HERE
+
+## Example
+yt-dlp --verbose --extract-audio --audio-format 'mp3' -o '~/Music/yt_dl/%(title)s.%(ext)s' https://www.youtube.com/watch?v=LQj--Kjn0z8
+
 # Install
 python3 -m venv .
 
