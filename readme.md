@@ -1,6 +1,8 @@
 # Install
 python3 -m venv .
+
 source bin/activate
+
 python3 -m pip install -U "yt-dlp[default]"
 
 # Setup
