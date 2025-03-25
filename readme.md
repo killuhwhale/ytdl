@@ -18,9 +18,3 @@ https://chromewebstore.google.com/detail/link-klipper-extract-all/fahollcgofmpne
 
 # Call and Download audio
 yt-dlp --verbose --extract-audio --audio-format 'mp3'  -o '~/Music/yt_dl/%(title)s%(ext)s' $1
-
-
-
-
-#Global config
-/etc/youtube-dl.conf // OLD , might be true
