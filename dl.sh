@@ -1,4 +1,5 @@
-#! /bin/sh
+#! /usr/bin/env bash
+
 
 # bash dl.sh video_url folder_name
 

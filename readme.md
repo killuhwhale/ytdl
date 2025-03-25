@@ -2,10 +2,10 @@
 
 
 # Single run
-yt-dlp --verbose --extract-audio --audio-format 'mp3' -o '~/Music/yt_dl/%(title)s.%(ext)s' URL_HERE
+bash single.sh URL_HERE
 
 ## Example
-yt-dlp --verbose --extract-audio --audio-format 'mp3' -o '~/Music/yt_dl/%(title)s.%(ext)s' https://www.youtube.com/watch?v=LQj--Kjn0z8
+bash single.sh https://www.youtube.com/watch?v=LQj--Kjn0z8
 
 # Install
 python3 -m venv .
