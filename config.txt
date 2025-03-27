@@ -1,0 +1,4 @@
+[DEFAULT]
+out_base_dir="/media/killuh/Crucial X9/yt_dl"
+xxxxout_base_dir="/home/killuh/Music/yt_dl"
+audio_type=".flac"
