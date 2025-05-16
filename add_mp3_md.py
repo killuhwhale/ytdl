@@ -2,6 +2,7 @@ import os
 from mutagen.easyid3 import EasyID3
 from mutagen.mp3 import MP3
 from mutagen.flac import FLAC
+from mutagen.asf import ASF
 
 import configparser
 
@@ -47,6 +48,20 @@ def add_metadata(directory, artist_name, album_name):
                 audio.save()
                 print(f"Metadata added successfully for FLAC: {file_path}")
                 print(f"Updated metadata for: {file_name}")
+            elif file_path.endswith(".wma"):
+                audio = ASF(file_path)
+                tags = audio.tags
+
+                # set Title if missing
+                if "Title" not in tags:
+                    tags["Title"] = [file_name.replace(".wma", "")]
+
+                # set artist and album
+                tags["Author"]        = [artist_name]
+                tags["WM/AlbumTitle"] = [album_name]
+
+                audio.save()
+                print(f"Metadata added successfully for WMA: {file_path}")
 
         except Exception as e:
             print(f"Failed to update {file_name}: {e}")
@@ -56,8 +71,8 @@ if __name__ == "__main__":
     # artist_name = input("Enter the artist name: ").strip()
     # album_name = input("Enter the album name: ").strip()
 
-    directory = "/media/killuh/Crucial X9/yt_dl/Mac Miller - Macadelic"
-    artist_name = "Mac Miller"
-    album_name = "Macadelic"
+    directory = "/home/killuh/Music/megaman"
+    artist_name = "Jake Messick"
+    album_name = "Mega `Locust` Man"
 
     add_metadata(directory, artist_name, album_name)
